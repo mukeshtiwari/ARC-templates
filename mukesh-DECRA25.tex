@@ -1,0 +1,226 @@
+%! program = pdflatex
+
+\documentclass[12pt,a4paper]{article} 
+\usepackage{arc-dp}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{pgfgantt}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{subfig}
+\usepackage{pgfgantt}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+
+\usepackage{booktabs} % for spacing tables
+\usepackage{tabularx} % auto table sizing
+\usepackage{multirow} % table multirow
+
+%\usepackage{epsf}
+%\usepackage{fancyheadings}
+%\usepackage{subfigure}
+%\usepackage{pst-gantt}
+%\usepackage{tweaklist}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{1pt}
+  \setlength{\itemsep}{1pt plus 0.3ex}
+}
+
+
+%\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+ % \setlength{\itemsep}{-2mm}}
+%\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{-2mm}}
+  %%%%%UNCOMMENT THE NEXT COMMAND IF NEEDED
+%\renewcommand{\descripthook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{-2mm}}
+
+%\pagestyle{fancy}
+
+%\input{psfig.sty}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\rules}[1]{\textcolor{blue}{#1}}
+\newcommand{\pset}{ {\rm P} \! \! \! {\rm P} }
+\date{}
+%\include{psfig}
+\remove{
+\topmargin -15mm
+\headheight 0pt
+\headsep 0pt
+\textheight 285mm
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\textwidth 190mm
+\columnsep 10mm
+\marginparwidth 0pt
+\marginparsep 0pt
+}
+
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\parindent=4mm
+\parskip=0.2mm
+
+%\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+
+%\linespread{1.5}
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{12}{12}%
+      \selectfont}
+
+\title{The Title of your ARC DP Proposal}
+%\author{}
+\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+\rmfamily
+\date{}
+
+
+\noindent \textbf{PROJECT TITLE: }\\ \noindent Privacy-preserving computing for 
+social good, underpinned by mathematical proof of correctness.
+
+%Assisted Query Formulation for Cheaper, Faster & Unbiased Systematic Review
+
+
+%Reducing Time and Cost for the Creation of Systematic Reviews through (Semi)-Automated Query Formulation\\ 
+%\noindent (Semi-) Automatic Assisted Query Formulation for the Creation of Systematic Reviews
+
+
+\subsection*{Application Summary}
+Computer programs (software) are governing almost every aspect of Australian society. 
+On one hand, they are making life convenient and efficient, on the other they 
+are also providing opportunities to cybercriminals to steal the sensitive data of 
+businesses and individuals in Australia. This project aims to address 
+data breaches by using the recent advancement in cryptography. More precisely, 
+it has two goals: (i) create novel privacy-preserving methods, particularly
+in electronic-voting and electronic-health, using cutting-edge cryptographic techniques 
+and (ii) use mathematics (constructive logic) to implement and prove these methods 
+are secure and trustworthy. Expected outcomes of this project includes new knowledge 
+to build trustworthy systems 
+
+This should provide significant societal benefits by avoiding the data breaches. 
+
+
+
+
+We intend to apply our findings 
+in other domains, electronic-governance, electronic-payment, and electronic-identity  
+and thereby significantly reducing the impact of data-breaches on Australian society. 
+
+
+
+\subsection*{Investigator/Capability}
+My research touches the lives of common people and solves
+real-world problems that matter to democracies and common people. During my 7 years research career 
+--ranging from Australian National University, University of Melbourne, University of Cambridge, 
+and University of Oxford-- I have produced 9 mathematically proven correct 
+software for public good, which includes software to count Australian Senate election ballots,
+mix-network used in Switzerland election, software for both: plaintext ballot Schulze Method and 
+encrypted ballot Schulze method, software to process sensitive data in trusted 
+computing (Intel SGX and ARM Trustzone), software to model cryptographic protocols, 
+software to verify elections conducted by International Association for Cryptologic Research, etc. 
+
+In this section, I briefly explain my papers and how they solve a problem pertaining to social good.
+My paper (i) \textbf{Assume but Verify: Deductive Verification of Leaked Information in Concurrent Applications} \cite{murrayassume},
+accepted in ACM CCS 2023, develops a theory
+for processing sensitive data --ethnic origin, political opinions,
+health-related data, and  biometric data-- of common
+people in secure enclave, e.g., Intel SGX, Arm TrustZone, etc. Moreover,
+we demonstrate the usability of our method by developing non-trivial case studies that handles
+sensitive data accompanied by the machine-checked mathematical proofs that none of
+them have unintended side-channel data leakage;
+(ii) \textbf{Machine-checking Multi-Round Proofs of Shuffle: Terelius-Wikstrom and Bayer-Groth} \cite{287095},
+published in USENIX Security 2023, mathematically establishes a critical piece of
+code in the SwissPost voting software --used in legally binding
+elections in Switzerland-- is correct (and debunks a decade old myth of the cryptographic
+community that Terelius-Wikstrom method is zero-knowledge proof. We have formally
+proved in the Coq theorem prover that it is a zero-knowledge argument and not
+a zero-knowledge proof);
+(iii) \textbf{Verifiable Homomorphic Tallying for the Schulze Vote Counting Scheme} \cite{10.1007/978-3-030-41600-3_4}, published
+in VSTTE 2019, not only developes a publicly verifiable method to count encrypted ballots for
+a complex voting method but it
+is also proven correct in the Coq theorem prover to ensure that there is no gap between
+the pen-and-paper proof and the actual implementation;  (iv) \textbf{Verified Verifiers for
+Verifying Elections} \cite{10.1145/3319535.3354247}, published in ACM CCS 2019, develops a mathematically proven correct tool
+in the Coq theorem prover to verify the elections conducted by
+the International Association for Cryptologic Research. We have used
+our tools to verify the integrity of IACR elections; (v) \textbf{Modular Formalisation and
+Verification of STV Algorithms} \cite{10.1007/978-3-030-00419-4_4}, published in E-Vote 2018, develops a mathematically proven
+correct tool in the Coq theorem prover. We have used this tool to verify
+the results of Australian Senate election;
+(vi) \textbf{Verifpal: Cryptographic Protocol Analysis for the Real World} \cite{10.1007/978-3-030-65277-7_8}, published in
+INDOCRYPT 2020, develops a tool that can used to model real work cryptographic protocol, and
+Verifpal has been used by many researchers to model security and privacy aspect of
+digital contact tracing during COVID; (vii) \textbf{Schulze Voting as Evidence Carrying Computation} \cite{10.1007/978-3-319-66107-0_26}, 
+published in ITP 2017, develops the idea of proof-carrying computation for 
+the Schulze Method, one of the widely used method over the Internet, etc. 
+At the University of Cambridge, I developed a mathematically proven correct tool in 
+the Coq theorem prover that can be used by researchers to model networking-protocols in the abstract
+setting of semirings (and we are in the process of submitting our paper in CAV 2024).
+At the University of Oxford, I am exploring the avenues to bridge the gap between a security protocol
+(formal communication model) with its implementation using session types, and our
+goal is to produce a more realistic distributed executable model of the security protocol.
+Currently, as a first step, I am focussing on Signal app
+where my goal is to prove (or disprove) that its Java implementation follows the
+communication model described in the Signal's documentation.
+In a nutshell, all my research so far has an impact on the lives on common people and
+researchers and my DECRA proposal is a step towards continuing my research 
+for the social good. 
+
+
+\subsection*{PROJECT QUALITY AND INNOVATION}
+
+
+
+\subsection*{BENEFIT}
+
+\subsection*{Feasibility}
+
+
+%\vspace{4pt}
+\renewcommand{\refname}{\normalfont\selectfont\TitleFont REFERENCES} 
+%\vspace{-14pt}
+\begingroup
+    \fontsize{10pt}{10pt}\selectfont
+\bibliographystyle{abbrv}
+\bibliography{references.bib}
+
+%\todo{\subsection*{Changes to be made}}
+%\todo{
+%\begin{enumerate}
+%\item bring clear aims, objectives and methods in the first page
+%\item clarify how the method is unique, why cannot be done by Google or others. Clarify why it leads to a solution
+%\item reduce the quantity of text
+%\item add images: 1. example of good query and results vs example of bad query and result; 2. study methodology/phases
+%\end{enumerate}}
+
+
+\endgroup
+
+
+\end{document}
+
+
