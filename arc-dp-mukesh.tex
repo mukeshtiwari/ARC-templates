@@ -1,0 +1,353 @@
+%! program = pdflatex
+
+\documentclass[12pt,a4paper]{article} 
+\usepackage{arc-dp}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{pgfgantt}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{subfig}
+\usepackage{pgfgantt}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+
+\usepackage{booktabs} % for spacing tables
+\usepackage{tabularx} % auto table sizing
+\usepackage{multirow} % table multirow
+
+%\usepackage{epsf}
+%\usepackage{fancyheadings}
+%\usepackage{subfigure}
+%\usepackage{pst-gantt}
+%\usepackage{tweaklist}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{1pt}
+  \setlength{\itemsep}{1pt plus 0.3ex}
+}
+
+
+%\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+ % \setlength{\itemsep}{-2mm}}
+%\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{-2mm}}
+  %%%%%UNCOMMENT THE NEXT COMMAND IF NEEDED
+%\renewcommand{\descripthook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{-2mm}}
+
+%\pagestyle{fancy}
+
+%\input{psfig.sty}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\rules}[1]{\textcolor{blue}{#1}}
+\newcommand{\pset}{ {\rm P} \! \! \! {\rm P} }
+\date{}
+%\include{psfig}
+\remove{
+\topmargin -15mm
+\headheight 0pt
+\headsep 0pt
+\textheight 285mm
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\textwidth 190mm
+\columnsep 10mm
+\marginparwidth 0pt
+\marginparsep 0pt
+}
+
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\parindent=4mm
+\parskip=0.2mm
+
+%\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+
+%\linespread{1.5}
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{12}{12}%
+      \selectfont}
+
+\title{The Title of your ARC DP Proposal}
+%\author{}
+\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+\rmfamily
+\date{}
+
+
+\noindent \textbf{PROJECT TITLE: }\\ \noindent The Title of your ARC DP Proposal
+
+%Assisted Query Formulation for Cheaper, Faster & Unbiased Systematic Review
+
+
+%Reducing Time and Cost for the Creation of Systematic Reviews through (Semi)-Automated Query Formulation\\ 
+%\noindent (Semi-) Automatic Assisted Query Formulation for the Creation of Systematic Reviews
+
+
+\subsection*{Application Summary}
+Computer programs (software) are governing almost every aspect of Australian society. 
+On one hand, they are making life convenient and efficient, on the other hand they 
+are also providing opportunities to cybercriminals to steal the sensitive data of 
+businesses and individuals in Australia. In fact, according to survey by Surfshark, 
+Australia\footnote{https://surfshark.com/research/data-breach-impact/statistics}
+is ranked 4th in the data-breach list. This project aims to achieve two goals: 
+(i) create novel methods for privacy-preserving computing,
+especially for electronic-health and electronic-voting, 
+and (ii) use mathematics (formal verification) to implement and prove that the 
+novel methods are secure and trustworthy.
+The expected outcomes of this project are novel methods and 
+mathematically proven correct computer programs (software) that can be 
+used Australian businesses and individuals without leaking their 
+sensitive data. In addition, 
+our findings can be applied to other domains, such as 
+electronic-governance, electronic-payment, electronic-identity, etc., 
+and thereby significantly reducing the impact of data-breach on 
+Australian businesses and individuals. 
+
+
+
+
+
+
+\subsection*{\TitleFont AIMS AND BACKGROUND}
+\rules{ Briefly outline the aims and background of the proposal.  Include information about 
+national/international progress in this field of research and its relationship to this 
+proposal. Refer only to publications or non-traditional equivalents (outputs) that are accessible 
+to the national and international research communities }
+
+Australia is ranked 4th in the data-breach list, and  
+there are already considerable amount of 
+data breaches\footnote{https://www.webberinsurance.com.au/data-breaches-list\#twentythree} in 2023.  
+One reason for these data breaches are that Australian businesses are 
+storing sensitive data in plaintext --that anyone having the access can read--  
+to verify their users and run the computation pertinent to business needs,
+meanwhile fail to take adequate measure to protect it. 
+In this project, I ask the following question: can businesses still 
+verify their users without having access to their personal sensitive 
+data, and at the same time, they can identify the 
+fraudulent users? In other words, businesses never get hold of 
+plaintext data of their customers but they can still verify 
+the legitimate users. However, this is a very broad question and 
+my goal is to look for the answers for two 
+particular domains (i) electronic voting (counting encrypted ballots) and 
+(ii) electronic health (computing ) using the latest 
+progress in the area of cryptography, more specifically 
+zero-knowledge succinct non-interactive argument of knowledge (zk-SNARK), 
+and later generalise them for other domains, e.g., 
+electronic-governance, electronic-payment, electronic-identity, etc. 
+
+
+(* conenct these two paragraphs *)
+
+
+
+\subsubsection*{Background on Cryptography (Zero-Knowledge Proof)}
+
+In this section, we give a brief primer on zero-knowledge proof and 
+pave the path for privacy-preserving computation. Zero-Knowledge proof is 
+a cryptographic protocol (method) where a prover (client) convinces a verifier (business)
+that she knows a secret (she has more that certain amount of money) without 
+telling the secret. In the process, prover interacts with client and 
+generates a proof (data) and this proof is used by the verifier (business)
+to ensure that the prover is telling truth. This process is inherently 
+private (no release of secret data) and at the same time verifiable, i.e., 
+the prover (client) cannot cheat. 
+
+We flesh down more the notion of privacy preserving computation. 
+In general, computations run to plaintext data and produce result. 
+If someone wants to verify the result then they run computation 
+again on the plaintext data (some is public and some is private) 
+and compare the result. 
+However, this is problem  because if the plaintext data 
+is not public, then there is no way to verify the result, 
+other than blindly trusting it. This could be harmful 
+in various situations, e.g., imagine government 
+taking certain decisions citing some private data, 
+declaring a winner of an election without releasing the 
+ballots, etc. 
+
+\textbf {Show a picture of unverifiable here} 
+
+Here choreography comes our rescue. We can use the 
+techniques developed by cryptographer long back. 
+In this way, with computation result  we also 
+produce a proof (data), as shown in the image. 
+
+  public data + private --- [computable function] --- output + proof 
+  public data + output + proof ----[verification function] -- true or false. 
+
+As the reader can see, now the result comes with a proof and 
+anyone can verify, using the verification function, that 
+that output is correct or not. These proofs are backed 
+mathematics and impossible to fake (zero-knowledge proofs 
+have three characteristics: completeness, soundness, and zero-knowledge). 
+
+So what good they are for? Well, the recent development in the area of zero-knowledge proofs, 
+in particular zero-knowledge succinct non-interactive argument of knowledge (zk-SNARK) 
+\cite{10.1007/978-3-642-17373-8_19, 10.1007/978-3-642-38348-9_37, 
+ben2013snarks, parno2016pinocchio, groth2016size, 10.1007/978-3-642-36594-2_18,
+10.1007/978-3-662-44381-1_16, 8418611, 10.1007/978-3-030-17653-2_4, 10.1145/3319535.3339817,
+cryptoeprint:2019/953, 10.1007/978-3-030-45721-1_26, 10.1007/978-3-030-56877-1_25}, 
+has led to an exponential growth in many useful privacy preserving 
+applications, e.g., anonymous payment\cite{6956581},  
+privacy-preserving smart-contracts \cite{7546538},  
+decentralised cryptocurrency \cite{cryptoeprint:2020/352}, 
+authentication of image transformation based on cryptographic proofs to 
+stop the fake image \cite{7546506}, using verifiable computation (VC), an untrusted ASIC computes 
+proofs of correct execution, which are verified by a trusted processor or ASIC \cite{7546534},
+Proving the Correct Execution of Concurrent Services in Zero-Knowledge \cite{222621},
+Enabling Decentralized Private Computation\cite{9152634, cryptoeprint:2022/802}, etc.  
+
+
+Aim (i) We intend to develop a protocol (method) STV for counting encrypted-ballots.
+Aim (ii) We intend to prove and implement that the protocol is correct and secure
+Aim (iii) We intend to develop the execution of differential privacy computation, 
+in SGX, is correct, very similar to .. This work has just pen-and-paper proof 
+while we want to ensure using mathematics that every thing is secure. 
+
+
+In addition, the one advantage of (i) and (ii) is that: the 
+current practice to verify the integrity of an election conducted electronically is to
+recompute the whole count on the publicly available (electronic) ballots, but
+this excludes many voters from verifying the integrity of the election because
+they do not posses a powerful enough computing device. Many of
+zk-SNARKs produce a very small size proof for the integrity of a computation
+regardless of the computation data. Therefore, if we deploy zk-SNARK in
+electronic-voting, it would increase the number of scrutineers because anyone, including the
+mobile devices holders, can verify the integrity of an election by checking these small size proofs.
+
+
+
+
+
+(This is my third step) 
+\begin{itemize}
+ \item In recent years,
+   machine learning models are getting bigger and bigger and cannot be trained using a normal computer.
+   Therefore, most of them are trained in cloud, but this
+   raises the question if the cloud has used the right set of data to train them model or not.
+   One way to solve this problem is to use verifiable computing and force the cloud to generate
+   a short proof (zk-SNARK) with the trained machine learning model.
+   This short proof can be then checked by any independent third party to attest the
+   integrity of training.
+  \end{itemize}
+
+
+\subsubsection*{Background on Formal Verification (Interactive Theorem Proving)}
+
+So far, we have emphasised on cryptography and proof (data). In this section, we say 
+proof, it is basically an object in a formal system. The current practices to 
+ensure that a software behaves correctly is to write test cases. However, 
+these test cases does not cover the whole software and it is still possible that 
+there could be bugs in the 
+
+
+
+
+
+
+\subsection*{\TitleFont INVESTIGATORS}
+\rules{This sub-section requires investigators to address the Selection Criteria (Investigators – 35\%). This section should be a high level summary of the Part D Personnel and ROPE section. Remember to:}
+
+\rules{Ensure that all participants (CIs, PIs and other participants [such as RAs and technical staff]) in the proposal are described here, explaining how they will contribute to the project, including their roles, responsibilities and contributions.}
+
+\rules{Provide evidence of research training, mentoring and supervision experience for each participant listed on the application.}
+
+\rules{Describe investigator capacity to build international collaborations.}
+
+\rules{Highlight that the project has the right team and design to achieve results with the time and resources available. This includes time and capacity to deliver, taking account of other grants held by the participants.}
+
+
+\subsection*{\TitleFont PROJECT QUALITY AND INNOVATION}
+\rules{This sub-section requires investigators to address the Selection Criteria (Project Quality and Innovation – 40\%). This section will need to provide: 
+Detail around both significance and innovation}
+
+\rules{An explanation of how the project will effectively address a significant problem}
+
+\rules{Evidence that the framework is innovative and original}
+
+\rules{Detail around the conceptual framework, design and methods to demonstrate that they are adequately developed, well integrated innovative and original.}
+
+\rules{How the research will maximise benefits to Australia, and if relevant, how it addresses any Science and Research Priorities (and associated Practical Challenges).}
+
+\rules{Describe the extent to which the proposal will advance knowledge.}
+
+\rules{Describe the potential for the research to enhance international collaboration.}
+\subsection*{Significance}
+\rules{An explanation of how the project will effectively address a significant problem}
+\subsection*{Innovation}
+\rules{Evidence that the framework is innovative and original}
+\subsection*{Conceptual Framework, Design and Methods}
+\rules{Detail around the conceptual framework, design and methods to demonstrate that they are adequately developed, well integrated innovative and original.}
+\subsubsection*{\underline{WP1: Example sub-sub-section, e.g. for work package}}
+
+\subsection*{\TitleFont FEASIBILITY}
+
+\rules{This sub-section requires investigators to address the Selection Criteria (Feasibility – 10\%). This section will need to provide: Specific detail around the feasibility of the project in terms of resources, availability of facilities and intellectual capacity, in order to ensure the project can be completed within budget and timeframe. Demonstration of a supportive and high quality environment for this project and for HDR students (where appropriate). A timeline of project activities may be useful in this section.}
+\subsubsection*{\underline{Timeframe and Budget}}
+ \subsubsection*{\underline{Supportive and high quality research environment}} 
+  \subsubsection*{\underline{Expertise and Intellectual Capacity}} 
+
+\subsection*{\TitleFont BENEFIT}
+\rules{This sub-section requires investigators to address the Selection Criteria – Benefit (15\%). This includes : Outline how the completed project will produce significant new knowledge and/or innovative economic, commercial, environmental, social and/or cultural benefit to the Australian and international community. 
+This response should expand on the National Interest Test Statement provided at A6. 
+Demonstrate how the project will be cost-effective and value for money.
+}
+
+
+\subsection*{\TitleFont COMMUNICATION OF RESULTS}
+\rules{Outline plans for communicating the research results to other researchers and the broader community, including scholarly and public communication and dissemination. This could also include plans for commercialisation.}
+
+\subsection*{\TitleFont MANAGEMENT OF DATA}
+\rules{ Outline plans for the management of data produced as a result of the proposed research, including but not limited to storage, access and re-use arrangement.
+ It is not sufficient to state that the organisation has a data management policy. Researchers are encouraged to highlight specific plans for the management of their research data. Please see UQ Data Management Tip Sheet \url{https://research.uq.edu.au/research-support/research-management/funding-schemes/australian-research-council-arc/arc-discovery-projects} for advice on resources available to support data management.
+}
+
+%\vspace{4pt}
+\renewcommand{\refname}{\normalfont\selectfont\TitleFont REFERENCES} 
+%\vspace{-14pt}
+\begingroup
+    \fontsize{10pt}{10pt}\selectfont
+\bibliographystyle{abbrv}
+\bibliography{references.bib}
+
+%\todo{\subsection*{Changes to be made}}
+%\todo{
+%\begin{enumerate}
+%\item bring clear aims, objectives and methods in the first page
+%\item clarify how the method is unique, why cannot be done by Google or others. Clarify why it leads to a solution
+%\item reduce the quantity of text
+%\item add images: 1. example of good query and results vs example of bad query and result; 2. study methodology/phases
+%\end{enumerate}}
+
+
+\endgroup
+
+
+\end{document}
+
+
