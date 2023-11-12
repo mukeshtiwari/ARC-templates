@@ -266,6 +266,425 @@ month = oct
 }
 
 
+@article{murrayassume,
+  title={{Assume but Verify: Deductive Verification of Leaked Information in Concurrent Applications (Extended Version)}},
+  author={Murray, Toby and Tiwari, Mukesh and Ernst, Gidon and Naumann, David A}
+}
+
+@inproceedings {287095,
+author = {Thomas Haines and Rajeev Gore and Mukesh Tiwari},
+title = {{Machine-checking {Multi-Round} Proofs of Shuffle: {Terelius-Wikstrom} and {Bayer-Groth}}},
+booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+year = {2023},
+isbn = {978-1-939133-37-3},
+address = {Anaheim, CA},
+pages = {6471--6488},
+url = {https://www.usenix.org/conference/usenixsecurity23/presentation/haines},
+publisher = {USENIX Association},
+month = aug
+}
+
+@InProceedings{10.1007/978-3-030-41600-3_4,
+author={Haines, Thomas
+and Pattinson, Dirk
+and Tiwari, Mukesh},
+editor={Chakraborty, Supratik
+and Navas, Jorge A.},
+title={{Verifiable Homomorphic Tallying for the Schulze Vote Counting Scheme}},
+booktitle={Verified Software. Theories, Tools, and Experiments},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={36--53},
+abstract={The encryption of ballots is crucial to maintaining integrity and anonymity in electronic 
+voting schemes. It enables, amongst other things, each voter to verify that their encrypted ballot has 
+been recorded as cast, by checking their ballot against a bulletin board.},
+isbn={978-3-030-41600-3}
+}
+
+
+@inproceedings{10.1145/3319535.3354247,
+author = {Haines, Thomas and Gor\'{e}, Rajeev and Tiwari, Mukesh},
+title = {{Verified Verifiers for Verifying Elections}},
+year = {2019},
+isbn = {9781450367479},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3319535.3354247},
+doi = {10.1145/3319535.3354247},
+abstract = {The security and trustworthiness of elections is critical to democracy; alas, securing elections is notoriously hard. Powerful cryptographic techniques for verifying the integrity of electronic voting have been developed and are in increasingly common use. The claimed security guarantees of most of these techniques have been formally proved. However, implementing the cryptographic verifiers which utilize these techniques is a technical and error prone process, and often leads to critical errors appearing in the gap between the implementation and the formally verified design. We significantly reduce the gap between theory and practice by using machine checked proofs coupled with code extraction to produce cryptographic verifiers that are themselves formally verified. We demonstrate the feasibility of our technique by producing a formally verified verifier which we use to check the 2018 International Association for Cryptologic Research (IACR) directors election.},
+booktitle = {Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {685–702},
+numpages = {18},
+keywords = {code extraction, interactive theorem provers, verifiable e-voting},
+location = {London, United Kingdom},
+series = {CCS '19}
+}
+
+
+@InProceedings{10.1007/978-3-030-00419-4_4,
+author={Ghale, Milad K.
+and Gor{\'e}, Rajeev
+and Pattinson, Dirk
+and Tiwari, Mukesh},
+editor={Krimmer, Robert
+and Volkamer, Melanie
+and Cortier, V{\'e}ronique
+and Gor{\'e}, Rajeev
+and Hapsara, Manik
+and Serd{\"u}lt, Uwe
+and Duenas-Cid, David},
+title={{Modular Formalisation and Verification of STV Algorithm}},
+booktitle={Electronic Voting},
+year={2018},
+publisher={Springer International Publishing},
+address={Cham},
+pages={51--66},
+abstract={We introduce a formal, modular framework that captures a large number of different instances of the Single Transferable Vote (STV) counting scheme in a uniform way. The framework requires that each instance defines the precise mechanism of counting and transferring ballots, electing and eliminating candidates. From formal proofs of basic sanity conditions for each mechanism inside the Coq theorem prover, we then synthesize code that implements the given scheme in a provably correct way and produces a universally verifiable certificate of the count. We have applied this to various variations of STV, including several used in Australian parliamentary elections and demonstrated the feasibility of our approach by means of real-world case studies.},
+isbn={978-3-030-00419-4}
+}
+
+@InProceedings{10.1007/978-3-030-65277-7_8,
+author={Kobeissi, Nadim
+and Nicolas, Georgio
+and Tiwari, Mukesh},
+editor={Bhargavan, Karthikeyan
+and Oswald, Elisabeth
+and Prabhakaran, Manoj},
+title={{Verifpal: Cryptographic Protocol Analysis for the Real World}},
+booktitle={Progress in Cryptology --  INDOCRYPT 2020},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={151--202},
+abstract={Verifpal is a new automated modeling framework and verifier for cryptographic protocols, optimized with heuristics for common-case protocol specifications, that aims to work better for real-world practitioners, students and engineers without sacrificing comprehensive formal verification features. In order to achieve this, Verifpal introduces a new, intuitive language for modeling protocols that is easier to write and understand than the languages employed by existing tools. Its formal verification paradigm is also designed explicitly to provide protocol modeling that avoids user error.},
+isbn={978-3-030-65277-7}
+}
+
+@InProceedings{10.1007/978-3-319-66107-0_26,
+author={Pattinson, Dirk
+and Tiwari, Mukesh},
+editor={Ayala-Rinc{\'o}n, Mauricio
+and Mu{\~{n}}oz, C{\'e}sar A.},
+title={{Schulze Voting as Evidence Carrying Computation}},
+booktitle={Interactive Theorem Proving},
+year={2017},
+publisher={Springer International Publishing},
+address={Cham},
+pages={410--426},
+abstract={The correctness of vote counting in electronic election is one of the main pillars that engenders trust in electronic elections. However, the present state of the art in vote counting leaves much to be desired: while some jurisdictions publish the source code of vote counting code, others treat the code as commercial in confidence. None of the systems in use today applies any formal verification. In this paper, we formally specify the so-called Schulze method, a vote counting scheme that is gaining popularity in the open-source community. The cornerstone of our formalization is a (dependent, inductive) type that represents all correct executions of the vote counting scheme. Every inhabitant of this type not only gives a final result but also all intermediate steps that lead to this result, and can be externally verified. As a consequence, we do not even need to trust the execution of the (verified) algorithm: the correctness of a particular run of the vote counting code can be verified on the basis of the evidence for correctness that is produced along with the determination of election winners.},
+isbn={978-3-319-66107-0}
+}
+
+@misc{AEC:2013:LMM,
+	title        = {{L}etter to {M}r {M}ichael {C}ordover, {LSS4883} {O}utcome of {I}nternal {R}eview of the {D}ecision to {R}efuse your {FOI} {R}equest No. {LS4849}},
+	author       = {{Australian Electoral Commission}},
+	year         = 2013,
+	note         = {{a}valiable via \url{http://www.aec.gov.au/information-access/foi/2014/files/ls4912-1.pdf}, retrieved October 23, 2019}
+}
+
+@misc{surfshark,
+    title = {{Data Breach Impact Statistics}},
+    organization = {Surfshark},
+    note = {{a}valiable via  \url{https://surfshark.com/research/data-breach-impact/statistics}, retrieved October 24, 2023}
+}
+
+@inproceedings{10.1145/586110.586114,
+author = {Camenisch, Jan and Van Herreweghen, Els},
+title = {{Design and Implementation of the Idemix Anonymous Credential System}},
+year = {2002},
+isbn = {1581136129},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/586110.586114},
+doi = {10.1145/586110.586114},
+abstract = {Anonymous credential systems [8, 9, 12, 24] allow anonymous yet authenticated and accountable transactions between users and service providers. As such, they represent a powerful technique for protecting users' privacy when conducting Internet transactions. In this paper, we describe the design and implementation of an anonymous credential system based on the protocols developed by [6]. The system is based on new high-level primitives and interfaces allowing for easy integration into access control systems. The prototype was realized in Java. We demonstrate its use and some deployment issues with the description of an operational demonstration scenario.},
+booktitle = {Proceedings of the 9th ACM Conference on Computer and Communications Security},
+pages = {21–30},
+numpages = {10},
+keywords = {anonymous credential systems, privacy, cryptographic protocols},
+location = {Washington, DC, USA},
+series = {CCS '02}
+}
+
+@article{10.1145/2133375.2133379,
+author = {Camenisch, Jan and Gro\ss{}, Thomas},
+title = {{Efficient Attributes for Anonymous Credentials}},
+year = {2012},
+issue_date = {March 2012},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {15},
+number = {1},
+issn = {1094-9224},
+url = {https://doi.org/10.1145/2133375.2133379},
+doi = {10.1145/2133375.2133379},
+abstract = {We extend the Camenisch-Lysyanskaya anonymous credential system such that selective disclosure of attributes becomes highly efficient. The resulting system significantly improves upon existing approaches, which suffer from a linear number of modular exponentiations in the total number of attributes. This limitation makes them unfit for many practical applications, such as electronic identity cards. Our novel approach can incorporate a large number of binary and finite-set attributes without significant performance impact. It compresses all such attributes into a single attribute base and, thus, boosts the efficiency of all proofs of possession. The core idea is to encode discrete binary and finite-set values as prime numbers. We then use the divisibility property for efficient proofs of their presence or absence. In addition, we contribute efficient methods for conjunctions and disjunctions. The system builds on the strong RSA assumption. We demonstrate the aptness of our method in realistic application scenarios, notably electronic identity cards, and show its advantages for small devices, such as smartcards and cell phones.},
+journal = {ACM Trans. Inf. Syst. Secur.},
+month = {mar},
+articleno = {4},
+numpages = {30},
+keywords = {privacy, Anonymous credential systems, efficient attribute encoding, cryptographic protocols, Identity Mixer, private certificate systems}
+}
+
+@article{10.1145/3338854,
+author = {Pussewalage, Harsha S. Gardiyawasam and Oleshchuk, Vladimir A.},
+title = {{An Anonymous Delegatable Attribute-Based Credential Scheme for a Collaborative E-Health Environment}},
+year = {2019},
+issue_date = {August 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {19},
+number = {3},
+issn = {1533-5399},
+url = {https://doi.org/10.1145/3338854},
+doi = {10.1145/3338854},
+abstract = {We propose an efficient anonymous, attribute-based credential scheme capable of provisioning multi-level credential delegations. It is integrated with a mechanism to revoke the anonymity of credentials for resolving access disputes and making users accountable for their actions. The proposed scheme has a lower end-user computational complexity in comparison to existing credential schemes with delegatability and has a comparable level of performance with the credential standards of U-Prove and Idemix. Furthermore, we demonstrate how the proposed scheme can be applied to a collaborative e-health environment to provide its users with the necessary anonymous access with delegation capabilities.},
+journal = {ACM Trans. Internet Technol.},
+month = {sep},
+articleno = {41},
+numpages = {22},
+keywords = {Anonymous credentials, delegatability, electronic health records}
+}
+
+@article{LIN2021103505,
+title = {Privacy-Enhancing Decentralized Anonymous Credential in Smart Grids},
+journal = {Computer Standards \& Interfaces},
+volume = {75},
+pages = {103505},
+year = {2021},
+issn = {0920-5489},
+doi = {https://doi.org/10.1016/j.csi.2020.103505},
+url = {https://www.sciencedirect.com/science/article/pii/S0920548920303925},
+author = {Chao Lin and Debiao He and Hongjie Zhang and Lisong Shao and Xinyi Huang},
+keywords = {SM2 digital signature, set membership, range proofs, decentralized anonymous credential, smart grid},
+abstract = {Decentralized Anonymous Credential (DAC) has posed enormous potential in smart grids for protecting user privacy (e.g. preventing user’s daily life from being sketched out). However, the existing DAC protocols still compromise user privacy for a full list of attributes are disclosed during showing credentials. In this paper, to construct a privacy-enhancing decentralized anonymous credential (PEDAC) protocol, we first design a more efficient range proof to hide user’s attributes. Specifically, we are inspired by Camenisch et al. (ASIACRYPT 2008), but replace their adopted Boneh-Boyen signature scheme with the Chinese standard SM2 signature scheme (incorporated in the ISO/IEC 14888-3) to propose pairing-free set membership and range proof protocols. These protocols can be executed non-interactively upon the Fiat-Shamir heuristic (INDOCRYPT 2012), and then be used to construct our PEDAC protocol. By compared with the protocols of Camenisch et al. (ASIACRYPT 2008) and Poelstra et al. (FC 2018), our proposed range proofs are with less communication and computation costs and hence more practical for constructing PEDAC protocols in smart grids.}
+}
+
+@article{doesburg2020using,
+  title={Using IRMA for small scale digital elections},
+  author={Doesburg, JJJ and Jacobs, BPF and Ringers, S},
+  year={2020}
+}
+
+@inproceedings{10.1145/22145.22178,
+author = {Goldwasser, S and Micali, S and Rackoff, C},
+title = {{The Knowledge Complexity of Interactive Proof-Systems}},
+year = {1985},
+isbn = {0897911512},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/22145.22178},
+doi = {10.1145/22145.22178},
+booktitle = {Proceedings of the Seventeenth Annual ACM Symposium on Theory of Computing},
+pages = {291–304},
+numpages = {14},
+location = {Providence, Rhode Island, USA},
+series = {STOC '85}
+}
+
+@inproceedings{groth2010short,
+  title={{Short Pairing-Based Non-interactive Zero-Knowledge Arguments}},
+  author={Groth, Jens},
+  booktitle={Advances in Cryptology-ASIACRYPT 2010: 16th International Conference on the Theory and Application of Cryptology and Information Security, Singapore, December 5-9, 2010. Proceedings 16},
+  pages={321--340},
+  year={2010},
+  organization={Springer}
+}
+
+@article{schnorr1991efficient,
+  title={Efficient signature generation by smart cards},
+  author={Schnorr, Claus-Peter},
+  journal={Journal of cryptology},
+  volume={4},
+  pages={161--174},
+  year={1991},
+  publisher={Springer}
+}
+
+@article{cramer1996modular,
+  title={Modular design of secure yet practical cryptographic protocols},
+  author={Cramer, Ronald},
+  journal={Ph. D.-thesis, CWI and U. of Amsterdam},
+  volume={2},
+  year={1996}
+}
+
+@inproceedings{adida2008helios,
+  title={{Helios: Web-based Open-Audit Voting}},
+  author={Adida, Ben},
+  booktitle={USENIX security symposium},
+  volume={17},
+  pages={335--348},
+  year={2008}
+}
+
+@article{cortier2019belenios,
+  title={{Belenios: A Simple Private and Verifiable Electronic Voting System}},
+  author={Cortier, V{\'e}ronique and Gaudry, Pierrick and Glondu, St{\'e}phane},
+  journal={Foundations of Security, Protocols, and Equational Reasoning: Essays Dedicated to Catherine A. Meadows},
+  pages={214--238},
+  year={2019},
+  publisher={Springer}
+}
+
+@software{the_coq_development_team_2019_3476303,
+	title        = {The Coq Proof Assistant, version 8.10.0},
+	author       = {The Coq Development Team},
+	year         = 2019,
+	month        = oct,
+	publisher    = {Zenodo},
+	doi          = {10.5281/zenodo.3476303},
+	url          = {https://doi.org/10.5281/zenodo.3476303},
+	version      = {8.10.0}
+}
+
+@INPROCEEDINGS{8835346,
+  author={Erbsen, Andres and Philipoom, Jade and Gross, Jason and Sloan, Robert and Chlipala, Adam},
+  booktitle={2019 IEEE Symposium on Security and Privacy (SP)}, 
+  title={{Simple High-Level Code for Cryptographic Arithmetic - With Proofs, Without Compromises}}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1202-1219},
+  doi={10.1109/SP.2019.00005}}
+
+@inproceedings{10.1145/3133956.3134043,
+author = {Zinzindohou\'{e}, Jean-Karim and Bhargavan, Karthikeyan and Protzenko, Jonathan and Beurdouche, Benjamin},
+title = {{HACL*: A Verified Modern Cryptographic Library}},
+year = {2017},
+isbn = {9781450349468},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3133956.3134043},
+doi = {10.1145/3133956.3134043},
+abstract = {HACL* is a verified portable C cryptographic library that implements modern cryptographic primitives such as the ChaCha20 and Salsa20 encryption algorithms, Poly1305 and HMAC message authentication, SHA-256 and SHA-512 hash functions, the Curve25519 elliptic curve, and Ed25519 signatures.HACL* is written in the F* programming language and then compiled to readable C code. The F* source code for each cryptographic primitive is verified for memory safety, mitigations against timing side-channels, and functional correctness with respect to a succinct high-level specification of the primitive derived from its published standard. The translation from F* to C preserves these properties and the generated C code can itself be compiled via the CompCert verified C compiler or mainstream compilers like GCC or CLANG. When compiled with GCC on 64-bit platforms, our primitives are as fast as the fastest pure C implementations in OpenSSL and libsodium, significantly faster than the reference C code in TweetNaCl, and between 1.1x-5.7x slower than the fastest hand-optimized vectorized assembly code in SUPERCOP.HACL* implements the NaCl cryptographic API and can be used as a drop-in replacement for NaCl libraries like libsodium and TweetNaCl. HACL* provides the cryptographic components for a new mandatory ciphersuite in TLS 1.3 and is being developed as the main cryptographic provider for the miTLS verified implementation. Primitives from HACL* are also being integrated within Mozilla's NSS cryptographic library. Our results show that writing fast, verified, and usable C cryptographic libraries is now practical.},
+booktitle = {Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {1789–1806},
+numpages = {18},
+keywords = {software verification, cryptographic library, vectorized code, formal methods, secure compilation},
+location = {Dallas, Texas, USA},
+series = {CCS '17}
+}
+
+@inproceedings{Blazy-Leroy-05,
+  author = {Sandrine Blazy and Xavier Leroy},
+  title = {{Formal verification of a memory model for {C}-like imperative languages}},
+  booktitle = {International Conference on Formal Engineering Methods (ICFEM 2005)},
+  year = 2005,
+  volume = 3785,
+  series = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  pages = {280--299},
+  url = {http://xavierleroy.org/publi/memory-model.pdf},
+  urlpublisher = {http://www.springerlink.com/openurl.asp?genre=article&id=doi:10.1007/11576280_20},
+  hal = {http://hal.inria.fr/inria-00077921/},
+  abstract = {
+This paper presents a formal verification with the Coq proof assistant
+of a memory model for C-like imperative languages. This model defines
+the memory layout and the operations that manage the memory. The model
+has been specified at two levels of abstraction and implemented as
+part of an ongoing certification in Coq of a moderately-optimising C
+compiler. Many properties of the memory have been verified in the
+specification. They facilitate the definition of precise formal
+semantics of C pointers. A certified OCaml code implementing the
+memory model has been automatically extracted from the
+specifications.},
+  xtopic = {compcert}
+}
+
+@InProceedings{10.1007/978-3-540-74591-4_3,
+author="Appel, Andrew W.
+and Blazy, Sandrine",
+editor="Schneider, Klaus
+and Brandt, Jens",
+title={{Separation Logic for Small-Step cminor}},
+booktitle="Theorem Proving in Higher Order Logics",
+year="2007",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="5--21",
+abstract="cminor is a mid-level imperative programming language; there are proved-correct optimizing compilers from C to cminor and from cminor to machine language. We have redesigned cminor so that it is suitable for Hoare Logic reasoning and we have designed a Separation Logic for cminor. In this paper, we give a small-step semantics (instead of the big-step of the proved-correct compiler) that is motivated by the need to support future concurrent extensions. We detail a machine-checked proof of soundness of our Separation Logic. This is the first large-scale machine-checked proof of a Separation Logic w.r.t. a small-step semantics. The work presented in this paper has been carried out in the Coq proof assistant. It is a first step towards an environment in which concurrent cminor programs can be verified using Separation Logic and also compiled by a proved-correct compiler with formal end-to-end correctness guarantees.",
+isbn="978-3-540-74591-4"
+}
+
+@InProceedings{10.1007/978-3-031-13188-2_14,
+author="Cohen, Joshua M.
+and Wang, Qinshi
+and Appel, Andrew W.",
+editor="Shoham, Sharon
+and Vizel, Yakir",
+title={{Verified Erasure Correction in Coq with MathComp and VST}},
+booktitle="Computer Aided Verification",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="272--292",
+abstract="Most methods of data transmission and storage are prone to errors, leading to data loss. Forward erasure correction (FEC) is a method to allow data to be recovered in the presence of errors by encoding the data with redundant parity information determined by an error-correcting code. There are dozens of classes of such codes, many based on sophisticated mathematics, making them difficult to verify using automated tools. In this paper, we present a formal, machine-checked proof of a C implementation of FEC based on Reed-Solomon coding. The C code has been actively used in network defenses for over 25 years, but the algorithm it implements was partially unpublished, and it uses certain optimizations whose correctness was unknown even to the code's authors. We use Coq's Mathematical Components library to prove the algorithm's correctness and the Verified Software Toolchain to prove that the C program correctly implements this algorithm, connecting both using a modular, well-encapsulated structure that could easily be used to verify a high-speed, hardware version of this FEC. This is the first end-to-end, formal proof of a real-world FEC implementation; we verified all previously unknown optimizations and found a latent bug in the code.",
+isbn="978-3-031-13188-2"
+}
+
+
+@article{10.1145/1743546.1743574,
+author = {Klein, Gerwin and Andronick, June and Elphinstone, Kevin and Heiser, Gernot and Cock, David and Derrin, Philip and Elkaduwe, Dhammika and Engelhardt, Kai and Kolanski, Rafal and Norrish, Michael and Sewell, Thomas and Tuch, Harvey and Winwood, Simon},
+title = {{SeL4: Formal Verification of an Operating-System Kernel}},
+year = {2010},
+issue_date = {June 2010},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {6},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/1743546.1743574},
+doi = {10.1145/1743546.1743574},
+journal = {Commun. ACM},
+month = {jun},
+pages = {107–115},
+numpages = {9}
+}
+@article{Bowe2019HaloRP,
+  title={{Halo: Recursive Proof Composition without a Trusted Setup}},
+  author={Sean Bowe and Jack Grigg and Daira Hopwood},
+  journal={IACR Cryptol. ePrint Arch.},
+  year={2019},
+  volume={2019},
+  pages={1021},
+  url={https://api.semanticscholar.org/CorpusID:202670380}
+}
+
+@article{Gabizon2019PLONKPO,
+  title={{PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge}},
+  author={Ariel Gabizon and Zachary J. Williamson and Oana-Madalina Ciobotaru},
+  journal={IACR Cryptol. ePrint Arch.},
+  year={2019},
+  volume={2019},
+  pages={953},
+  url={https://api.semanticscholar.org/CorpusID:201685538}
+}
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
 
 
   
